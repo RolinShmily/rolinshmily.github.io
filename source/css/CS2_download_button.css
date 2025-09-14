@@ -1,0 +1,68 @@
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.cfg-preview-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+.cfg-preview-content {
+  background: white;
+  width: 100%;
+  max-width: 800px;
+  height: 80vh;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border-radius: 8px;
+  overflow: auto;
+  position: relative;
+}
+.cfg-close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #ff4444;
+  color: white;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.cfg-download-btn {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.cfg-file-content {
+  white-space: pre; /* 保留文本中的空格和换行 */
+  font-family: monospace; /* 使用等宽字体，适合代码/配置文件 */
+  color: #333;
+}
+/* 深色主题样式 - 基于data-theme="dark" */
+html[data-theme="dark"] .cfg-preview-content {
+  background: #1e1e1e; /* 深色背景 */
+}
+html[data-theme="dark"] .cfg-file-content {
+  color: #e0e0e0; /* 浅色文本 */
+}
+html[data-theme="dark"] .cfg-close-btn {
+  background: #d12525; /* 深色主题下的关闭按钮颜色 */
+}
+html[data-theme="dark"] .cfg-download-btn {
+  background: #0b5ed7; /* 深色主题下的下载按钮颜色 */
+}

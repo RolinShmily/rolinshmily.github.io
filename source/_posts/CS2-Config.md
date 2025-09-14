@@ -12,10 +12,25 @@ cover: >-
   https://cdn.jsdelivr.net/gh/RolinShmily/Images@main/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240913084859.jpg
 abbrlink: b445fd38
 date: 2025-04-12 00:00:00
-updated: 2025-08-17 00:00:00
+updated: 2025-09-14 00:00:00
 description:
 keywords:
 ---
+
+<link rel="stylesheet" href="/css/CS2_download_button.css">
+<script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+<script src="/js/CS2_download_zip_button_self.js"></script>
+<script src="/js/CS2_download_zip_button_lulu.js"></script>
+<!-- 预览模态框（默认隐藏） -->
+<div class="cfg-preview-modal" id="cfgPreviewModal">
+  <div class="cfg-preview-content">
+    <button class="cfg-close-btn" onclick="closePreview()">×</button>
+    <h3 id="previewFileName"></h3>
+    <pre class="cfg-file-content" id="previewContent"></pre>
+    <button class="cfg-download-btn" onclick="downloadCurrentFile()">下载此文件</button>
+  </div>
+</div>
+<script src="/js/CS2_mono_file_preview_and_download_table.js"></script>
 
 # 什么是 CFG
 
@@ -298,110 +313,11 @@ mp_weapons_glow_on_ground 1 // 开启地面武器的高亮显示功能
 
 # 自用配置分享
 
-<button id="downloadBtn" onclick="packAndDownload()" style="padding: 8px 16px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px;">
+<button id="downloadBtn1" onclick="packAndDownload()" style="padding: 8px 16px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px;">
   <span>打包并打包下载全部CFG文件</span>
-  <div id="loader" style="display: none; width: 16px; height: 16px; border: 2px solid rgba(255,255,255,0.3); border-radius: 50%; border-top-color: white; animation: spin 1s ease-in-out infinite;"></div>
+  <div id="loader1" style="display: none; width: 16px; height: 16px; border: 2px solid rgba(255,255,255,0.3); border-radius: 50%; border-top-color: white; animation: spin 1s ease-in-out infinite;"></div>
 </button>
-<div id="statusMessage" style="margin-top: 8px; color: #666; font-size: 14px; height: 20px;"></div>
-
-<style>
-  @keyframes spin {
-    to { transform: rotate(360deg); }
-  }
-</style>
-
-<script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
-<script>
-async function packAndDownload() {
-  const btn = document.getElementById('downloadBtn');
-  const loader = document.getElementById('loader');
-  const statusMsg = document.getElementById('statusMessage');
-  
-  // 1. 准备阶段 - 更新UI状态
-  btn.disabled = true;
-  btn.style.background = '#6c757d';
-  loader.style.display = 'block';
-  statusMsg.textContent = '正在准备文件...';
-  
-  // 2. 定义文件列表
-  const filesToPack = [
-    { name: "autoexec.cfg", url: "./cfgs/autoexec.cfg" },
-    { name: "crosshair_view.cfg", url: "./cfgs/crosshair_view.cfg" },
-    { name: "demo_hlae.cfg", url: "./cfgs/demo_hlae.cfg" },
-    { name: "knife.cfg", url: "./cfgs/knife.cfg" },
-    { name: "lastinv.cfg", url: "./cfgs/lastinv.cfg" },
-    { name: "train.cfg", url: "./cfgs/train.cfg" },
-    { name: "zeus.cfg", url: "./cfgs/zeus.cfg" },
-    { name: "spawn/ancient.cfg", url: "./cfgs/spawn/ancient.cfg" },
-    { name: "spawn/anubis.cfg", url: "./cfgs/spawn/anubis.cfg" },
-    { name: "spawn/dust2.cfg", url: "./cfgs/spawn/dust2.cfg" },
-    { name: "spawn/inferno.cfg", url: "./cfgs/spawn/inferno.cfg" },
-    { name: "spawn/init_spawns.cfg", url: "./cfgs/spawn/init_spawns.cfg" },
-    { name: "spawn/italy.cfg", url: "./cfgs/spawn/italy.cfg" },
-    { name: "spawn/mirage.cfg", url: "./cfgs/spawn/mirage.cfg" },
-    { name: "spawn/nuke.cfg", url: "./cfgs/spawn/nuke.cfg" },
-    { name: "spawn/office.cfg", url: "./cfgs/spawn/office.cfg" },
-    { name: "spawn/spawn.cfg", url: "./cfgs/spawn/spawn.cfg" },
-    { name: "spawn/vertigo.cfg", url: "./cfgs/spawn/vertigo.cfg" },
-    { name: "crosshair_library/01.cfg", url: "./cfgs/crosshair_library/01.cfg" },
-    { name: "crosshair_library/02.cfg", url: "./cfgs/crosshair_library/02.cfg" },
-    { name: "crosshair_library/03.cfg", url: "./cfgs/crosshair_library/03.cfg" },
-    { name: "crosshair_library/04.cfg", url: "./cfgs/crosshair_library/04.cfg" }
-  ];
-
-  // 3. 创建ZIP实例
-  const zip = new JSZip();
-  
-  try {
-    // 4. 循环下载文件并显示进度
-    for (let i = 0; i < filesToPack.length; i++) {
-      const file = filesToPack[i];
-      // 更新进度信息
-      statusMsg.textContent = `正在处理文件 ${i+1}/${filesToPack.length}: ${file.name}`;
-      
-      const response = await fetch(file.url);
-      if (!response.ok) {
-        throw new Error(`无法获取文件: ${file.name}`);
-      }
-      const content = await response.text();
-      zip.file(file.name, content);
-    }
-
-    // 5. 生成ZIP并下载
-    statusMsg.textContent = '正在生成压缩文件...';
-    zip.generateAsync({ type: "blob" })
-      .then(function(content) {
-        const a = document.createElement("a");
-        a.href = URL.createObjectURL(content);
-        a.download = "Allcfgs.zip";
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-        URL.revokeObjectURL(a.href);
-        
-        // 下载完成
-        statusMsg.textContent = '下载完成!';
-      });
-
-  } catch (error) {
-    console.error("打包失败:", error);
-    statusMsg.textContent = `错误: ${error.message}`;
-    statusMsg.style.color = '#dc3545';
-  } finally {
-    // 恢复按钮状态
-    setTimeout(() => {
-      btn.disabled = false;
-      btn.style.background = '#28a745';
-      loader.style.display = 'none';
-      
-      // 5秒后清除状态消息
-      if (statusMsg.textContent !== '错误: 无法获取文件') {
-        setTimeout(() => statusMsg.textContent = '', 5000);
-      }
-    }, 1000);
-  }
-}
-</script>
+<div id="statusMessage1" style="margin-top: 8px; color: #666; font-size: 14px; height: 20px;"></div>
 
 [云盘存储地址](https://openlist.srprolin.top/blog/CS2-CFGS/cfgs)
 
@@ -566,276 +482,11 @@ async function packAndDownload() {
 - 可以先下载`全部自用配置cfg`,再下载此部分,将修改后的内容覆盖原来的文件.
   [云盘存储地址](https://openlist.srprolin.top/blog/CS2-CFGS/lulu)
 
-<button id="downloadBtn" onclick="packAndDownloadLulu()" style="padding: 8px 16px; background: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px;">
+<button id="downloadBtn2" onclick="packAndDownloadLulu()" style="padding: 8px 16px; background: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px;">
   <span>打包并下载全部CFG文件(此链接为全部cfg)</span>
-  <div id="loader" style="display: none; width: 16px; height: 16px; border: 2px solid rgba(255,255,255,0.3); border-radius: 50%; border-top-color: white; animation: spin 1s ease-in-out infinite;"></div>
+  <div id="loader2" style="display: none; width: 16px; height: 16px; border: 2px solid rgba(255,255,255,0.3); border-radius: 50%; border-top-color: white; animation: spin 1s ease-in-out infinite;"></div>
 </button>
-<div id="statusMessage" style="margin-top: 8px; color: #666; font-size: 14px; height: 20px;"></div>
-
-<style>
-  @keyframes spin {
-    to { transform: rotate(360deg); }
-  }
-</style>
-
-<script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
-<script>
-async function packAndDownloadLulu() {
-  const btn = document.getElementById('downloadBtn');
-  const loader = document.getElementById('loader');
-  const statusMsg = document.getElementById('statusMessage');
-  
-  // 1. 准备阶段 - 更新UI状态
-  btn.disabled = true;
-  btn.style.background = '#6c757d';
-  loader.style.display = 'block';
-  statusMsg.textContent = '正在准备文件...';
-  
-  // 2. 定义文件列表
-  const filesToPack = [
-    { name: "autoexec.cfg", url: "./lulu/autoexec.cfg" },
-    { name: "crosshair_view.cfg", url: "./lulu/crosshair_view.cfg" },
-    { name: "demo_hlae.cfg", url: "./cfgs/demo_hlae.cfg" },
-    { name: "knife.cfg", url: "./cfgs/knife.cfg" },
-    { name: "lastinv.cfg", url: "./cfgs/lastinv.cfg" },
-    { name: "train.cfg", url: "./cfgs/train.cfg" },
-    { name: "zeus.cfg", url: "./cfgs/zeus.cfg" },
-    { name: "spawn/ancient.cfg", url: "./cfgs/spawn/ancient.cfg" },
-    { name: "spawn/anubis.cfg", url: "./cfgs/spawn/anubis.cfg" },
-    { name: "spawn/dust2.cfg", url: "./cfgs/spawn/dust2.cfg" },
-    { name: "spawn/inferno.cfg", url: "./cfgs/spawn/inferno.cfg" },
-    { name: "spawn/init_spawns.cfg", url: "./cfgs/spawn/init_spawns.cfg" },
-    { name: "spawn/italy.cfg", url: "./cfgs/spawn/italy.cfg" },
-    { name: "spawn/mirage.cfg", url: "./cfgs/spawn/mirage.cfg" },
-    { name: "spawn/nuke.cfg", url: "./cfgs/spawn/nuke.cfg" },
-    { name: "spawn/office.cfg", url: "./cfgs/spawn/office.cfg" },
-    { name: "spawn/spawn.cfg", url: "./cfgs/spawn/spawn.cfg" },
-    { name: "spawn/vertigo.cfg", url: "./cfgs/spawn/vertigo.cfg" },
-    { name: "crosshair_library/01.cfg", url: "./cfgs/crosshair_library/01.cfg" },
-    { name: "crosshair_library/02.cfg", url: "./cfgs/crosshair_library/02.cfg" },
-    { name: "crosshair_library/03.cfg", url: "./cfgs/crosshair_library/03.cfg" },
-    { name: "crosshair_library/04.cfg", url: "./cfgs/crosshair_library/04.cfg" }
-  ];
-
-  // 3. 创建ZIP实例
-  const zip = new JSZip();
-  
-  try {
-    // 4. 循环下载文件并显示进度
-    for (let i = 0; i < filesToPack.length; i++) {
-      const file = filesToPack[i];
-      // 更新进度信息
-      statusMsg.textContent = `正在处理文件 ${i+1}/${filesToPack.length}: ${file.name}`;
-      
-      const response = await fetch(file.url);
-      if (!response.ok) {
-        throw new Error(`无法获取文件: ${file.name}`);
-      }
-      const content = await response.text();
-      zip.file(file.name, content);
-    }
-
-    // 5. 生成ZIP并下载
-    statusMsg.textContent = '正在生成压缩文件...';
-    zip.generateAsync({ type: "blob" })
-      .then(function(content) {
-        const a = document.createElement("a");
-        a.href = URL.createObjectURL(content);
-        a.download = "AllcfgsForLulu.zip";
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-        URL.revokeObjectURL(a.href);
-        
-        // 下载完成
-        statusMsg.textContent = '下载完成!';
-      });
-
-  } catch (error) {
-    console.error("打包失败:", error);
-    statusMsg.textContent = `错误: ${error.message}`;
-    statusMsg.style.color = '#dc3545';
-  } finally {
-    // 恢复按钮状态
-    setTimeout(() => {
-      btn.disabled = false;
-      btn.style.background = '#28a745';
-      loader.style.display = 'none';
-      
-      // 5秒后清除状态消息
-      if (statusMsg.textContent !== '错误: 无法获取文件') {
-        setTimeout(() => statusMsg.textContent = '', 5000);
-      }
-    }, 1000);
-  }
-}
-</script>
+<div id="statusMessage2" style="margin-top: 8px; color: #666; font-size: 14px; height: 20px;"></div>
 
 - 下载可能会有延迟，请耐心等待，并且请注意浏览器拦截下载。
 - 下载完成后会得到一个压缩包，直接放进 cfg 文件夹，并右击选择“解压到此文件夹“即可。
-
-<!--  预览样式：用于美化预览区域 -->
-<style>
-  .cfg-preview-modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.7);
-    z-index: 1000;
-    padding: 2rem;
-    box-sizing: border-box;
-  }
-  .cfg-preview-content {
-    background: white;
-    width: 100%;
-    max-width: 800px;
-    height: 80vh;
-    margin: 0 auto;
-    padding: 1.5rem;
-    border-radius: 8px;
-    overflow: auto;
-    position: relative;
-  }
-  .cfg-close-btn {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: #ff4444;
-    color: white;
-    border: none;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    cursor: pointer;
-  }
-  .cfg-download-btn {
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    background: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  .cfg-file-content {
-    white-space: pre; /* 保留文本中的空格和换行 */
-    font-family: monospace; /* 使用等宽字体，适合代码/配置文件 */
-    color: #333;
-  }
-  /* 深色主题样式 - 基于data-theme="dark" */
-  html[data-theme="dark"] .cfg-preview-content {
-    background: #1e1e1e; /* 深色背景 */
-  }
-  html[data-theme="dark"] .cfg-file-content {
-    color: #e0e0e0; /* 浅色文本 */
-  }
-  html[data-theme="dark"] .cfg-close-btn {
-    background: #d12525; /* 深色主题下的关闭按钮颜色 */
-  }
-  html[data-theme="dark"] .cfg-download-btn {
-    background: #0b5ed7; /* 深色主题下的下载按钮颜色 */
-  }
-</style>
-
-<!-- 预览模态框（默认隐藏） -->
-<div class="cfg-preview-modal" id="cfgPreviewModal">
-  <div class="cfg-preview-content">
-    <button class="cfg-close-btn" onclick="closePreview()">×</button>
-    <h3 id="previewFileName"></h3>
-    <pre class="cfg-file-content" id="previewContent"></pre>
-    <button class="cfg-download-btn" onclick="downloadCurrentFile()">下载此文件</button>
-  </div>
-</div>
-
-<!-- 按键监听与文件预览脚本：区分单击和Ctrl+单击行为，单击显示预览 -->
-<script>
-  // 存储当前预览的文件信息
-  let currentFileInfo = null;
-
-  // 监听所有CFG链接的点击事件
-  document.querySelectorAll('.file-link').forEach(link => {
-    link.addEventListener('click', async (e) => {
-      // 判断是否按下Ctrl/Command键（用于下载）
-      const isCtrlPressed = e.ctrlKey || e.metaKey;
-      
-      if (isCtrlPressed) {
-        // Ctrl+单击：直接下载
-        e.preventDefault();
-        const fileUrl = link.href;
-        const fileName = link.dataset.filename;
-        downloadFile(fileUrl, fileName);
-      } else {
-        // 普通单击：预览文件内容
-        e.preventDefault();
-        const fileUrl = link.href;
-        const fileName = link.dataset.filename;
-        
-        try {
-          // 获取文件内容
-          const response = await fetch(fileUrl);
-          if (!response.ok) throw new Error('文件不存在或无法访问');
-          const content = await response.text();
-          
-          // 存储当前文件信息（用于下载按钮）
-          currentFileInfo = { url: fileUrl, name: fileName };
-          
-          // 显示预览模态框
-          document.getElementById('previewFileName').textContent = fileName;
-          document.getElementById('previewContent').textContent = content;
-          document.getElementById('cfgPreviewModal').style.display = 'block';
-        } catch (error) {
-          console.error('预览失败:', error);
-          alert('无法预览文件：' + error.message);
-        }
-      }
-    });
-  });
-
-  // 关闭预览模态框
-  function closePreview() {
-    document.getElementById('cfgPreviewModal').style.display = 'none';
-    currentFileInfo = null;
-  }
-
-  // 下载当前预览的文件
-  function downloadCurrentFile() {
-    if (currentFileInfo) {
-      downloadFile(currentFileInfo.url, currentFileInfo.name);
-    }
-  }
-
-  // 通用下载函数
-  function downloadFile(url, filename) {
-    fetch(url)
-      .then(response => response.blob())
-      .then(blob => {
-        const blobUrl = URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = blobUrl;
-        a.download = filename;
-        a.click();
-        setTimeout(() => URL.revokeObjectURL(blobUrl), 100);
-      })
-      .catch(error => {
-        console.error('下载失败:', error);
-        alert('下载失败，请重试');
-      });
-  }
-
-  // 点击模态框外部关闭预览
-  document.getElementById('cfgPreviewModal').addEventListener('click', (e) => {
-    if (e.target === document.getElementById('cfgPreviewModal')) {
-      closePreview();
-    }
-  });
-
-  // 按ESC键关闭预览
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && document.getElementById('cfgPreviewModal').style.display === 'block') {
-      closePreview();
-    }
-  });
-</script>
