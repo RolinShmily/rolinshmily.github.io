@@ -300,6 +300,7 @@ mp_weapons_glow_on_ground 1 // 开启地面武器的高亮显示功能
 <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
 <script src="/js/CS2_download_zip_button_self.js"></script>
 <script src="/js/CS2_download_zip_button_lulu.js"></script>
+<script src="/js/CS2_download_zip_button_echo.js"></script>
 <script src="/js/CS2_mono_file_preview_and_download_table.js"></script>
 <!-- 预览模态框（默认隐藏） -->
 <div class="cfg-preview-modal" id="cfgPreviewModal">
@@ -490,3 +491,24 @@ mp_weapons_glow_on_ground 1 // 开启地面武器的高亮显示功能
 
 - 下载可能会有延迟，请耐心等待，并且请注意浏览器拦截下载。
 - 下载完成后会得到一个`AllcfgsForLulu`压缩包，直接放进 cfg 文件夹，并右击选择“解压到此文件夹“即可。
+
+- 点击查看<a href="./cfgs/autoexec.cfg" class="file-link" data-filename="autoexec.cfg">autoexec_ForLulu</a>
+- 点击查看<a href="./cfgs/crosshair_view.cfg" class="file-link" data-filename="crosshair_view.cfg">crosshair_view_ForLulu</a>
+
+# echo's cfg
+
+- 修改了 autoexec 的默认按键绑定
+- 点击`云盘存储地址`查看并下载所更改文件
+- 可以先下载`全部自用配置cfg`,再下载此部分,将修改后的内容覆盖原来的文件.
+  点击：[云盘存储地址](https://openlist.srprolin.top/CS2-CFGS/echo)，里面是修改过的相关文件。
+
+<button id="downloadBtn3" onclick="packAndDownloadEcho()" style="padding: 8px 16px; background: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px;">
+  <span>打包并下载全部CFG文件(此链接为全部cfg)</span>
+  <div id="loader3" style="display: none; width: 16px; height: 16px; border: 2px solid rgba(255,255,255,0.3); border-radius: 50%; border-top-color: white; animation: spin 1s ease-in-out infinite;"></div>
+</button>
+<div id="statusMessage3" style="margin-top: 8px; color: #666; font-size: 14px; height: 20px;"></div>
+
+- 下载可能会有延迟，请耐心等待，并且请注意浏览器拦截下载。
+- 下载完成后会得到一个`AllcfgsForEcho`压缩包，直接放进 cfg 文件夹，并右击选择“解压到此文件夹“即可。
+
+- 点击查看<a href="./cfgs/autoexec.cfg" class="file-link" data-filename="autoexec.cfg">autoexec_ForEcho</a>
