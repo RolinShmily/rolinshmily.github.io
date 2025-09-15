@@ -1,7 +1,7 @@
 async function packAndDownload() {
-  const btn = document.getElementById("downloadBtn");
-  const loader = document.getElementById("loader");
-  const statusMsg = document.getElementById("statusMessage");
+  const btn = document.getElementById("downloadBtn1");
+  const loader = document.getElementById("loader1");
+  const statusMsg = document.getElementById("statusMessage1");
 
   // 1. 准备阶段 - 更新UI状态
   btn.disabled = true;
