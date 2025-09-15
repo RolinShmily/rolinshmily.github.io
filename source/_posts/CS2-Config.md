@@ -296,29 +296,15 @@ mp_weapons_glow_on_ground 1 // 开启地面武器的高亮显示功能
 - 下面的就是快捷轮盘对应槽位的关键词配置
   ![](https://cdn.jsdelivr.net/gh/RolinShmily/Images@main/20250721newstart/PixPin_2025-07-25_03-23-37.png)
 
-<link rel="stylesheet" href="/css/CS2_download_preview.css">
-<script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
-<script src="/js/CS2_download_zip_button_self.js"></script>
-<script src="/js/CS2_download_zip_button_lulu.js"></script>
-<script src="/js/CS2_download_zip_button_echo.js"></script>
-<script src="/js/CS2_mono_file_preview_and_download_table.js"></script>
-<!-- 预览模态框（默认隐藏） -->
-<div class="cfg-preview-modal" id="cfgPreviewModal">
-  <div class="cfg-preview-content">
-    <button class="cfg-close-btn" onclick="closePreview()">×</button>
-    <h3 id="previewFileName"></h3>
-    <pre class="cfg-file-content" id="previewContent"></pre>
-    <button class="cfg-download-btn" onclick="downloadCurrentFile()">下载此文件</button>
-  </div>
-</div>
-
 # 自用配置分享
 
+<script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
 <button id="downloadBtn1" onclick="packAndDownload()" style="padding: 8px 16px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px;">
   <span>打包下载全部CFG文件</span>
   <div id="loader1" style="display: none; width: 16px; height: 16px; border: 2px solid rgba(255,255,255,0.3); border-radius: 50%; border-top-color: white; animation: spin 1s ease-in-out infinite;"></div>
 </button>
 <div id="statusMessage1" style="margin-top: 8px; color: #666; font-size: 14px; height: 20px;"></div>
+<script src="/js/CS2_download_zip_button_self.js"></script>
 
 点击：[云盘存储地址](https://openlist.srprolin.top/CS2-CFGS/cfgs)，可以前往上一层文件夹，打包下载 cfgs 文件夹。
 
@@ -488,6 +474,7 @@ mp_weapons_glow_on_ground 1 // 开启地面武器的高亮显示功能
   <div id="loader2" style="display: none; width: 16px; height: 16px; border: 2px solid rgba(255,255,255,0.3); border-radius: 50%; border-top-color: white; animation: spin 1s ease-in-out infinite;"></div>
 </button>
 <div id="statusMessage2" style="margin-top: 8px; color: #666; font-size: 14px; height: 20px;"></div>
+<script src="/js/CS2_download_zip_button_lulu.js"></script>
 
 - 下载可能会有延迟，请耐心等待，并且请注意浏览器拦截下载。
 - 下载完成后会得到一个`AllcfgsForLulu`压缩包，直接放进 cfg 文件夹，并右击选择“解压到此文件夹“即可。
@@ -507,8 +494,20 @@ mp_weapons_glow_on_ground 1 // 开启地面武器的高亮显示功能
   <div id="loader3" style="display: none; width: 16px; height: 16px; border: 2px solid rgba(255,255,255,0.3); border-radius: 50%; border-top-color: white; animation: spin 1s ease-in-out infinite;"></div>
 </button>
 <div id="statusMessage3" style="margin-top: 8px; color: #666; font-size: 14px; height: 20px;"></div>
-
+<script src="/js/CS2_download_zip_button_echo.js"></script>
 - 下载可能会有延迟，请耐心等待，并且请注意浏览器拦截下载。
 - 下载完成后会得到一个`AllcfgsForEcho`压缩包，直接放进 cfg 文件夹，并右击选择“解压到此文件夹“即可。
 
 - 点击查看<a href="./cfgs/autoexec.cfg" class="file-link" data-filename="autoexec.cfg">autoexec_ForEcho</a>
+
+<!-- 预览模态框（默认隐藏） -->
+<div class="cfg-preview-modal" id="cfgPreviewModal">
+  <div class="cfg-preview-content">
+    <button class="cfg-close-btn" onclick="closePreview()">×</button>
+    <h3 id="previewFileName"></h3>
+    <pre class="cfg-file-content" id="previewContent"></pre>
+    <button class="cfg-download-btn" onclick="downloadCurrentFile()">下载此文件</button>
+  </div>
+</div>
+<script src="/js/CS2_mono_file_preview_and_download_table.js"></script>
+<link rel="stylesheet" href="/css/CS2_download_preview.css">
