@@ -1,14 +1,16 @@
+// 首先引入 JSZip 库（使用 CDN 地址）
+importScripts("https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js");
 async function packAndDownload() {
-  const btn = document.getElementById('downloadBtn1');
-  const loader = document.getElementById('loader1');
-  const statusMsg = document.getElementById('statusMessage1');
-  
+  const btn = document.getElementById("downloadBtn");
+  const loader = document.getElementById("loader");
+  const statusMsg = document.getElementById("statusMessage");
+
   // 1. 准备阶段 - 更新UI状态
   btn.disabled = true;
-  btn.style.background = '#6c757d';
-  loader.style.display = 'block';
-  statusMsg.textContent = '正在准备文件...';
-  
+  btn.style.background = "#6c757d";
+  loader.style.display = "block";
+  statusMsg.textContent = "正在准备文件...";
+
   // 2. 定义文件列表
   const filesToPack = [
     { name: "autoexec.cfg", url: "./cfgs/autoexec.cfg" },
@@ -29,65 +31,72 @@ async function packAndDownload() {
     { name: "spawn/office.cfg", url: "./cfgs/spawn/office.cfg" },
     { name: "spawn/spawn.cfg", url: "./cfgs/spawn/spawn.cfg" },
     { name: "spawn/vertigo.cfg", url: "./cfgs/spawn/vertigo.cfg" },
-    { name: "crosshair_library/01.cfg", url: "./cfgs/crosshair_library/01.cfg" },
-    { name: "crosshair_library/02.cfg", url: "./cfgs/crosshair_library/02.cfg" },
-    { name: "crosshair_library/03.cfg", url: "./cfgs/crosshair_library/03.cfg" },
-    { name: "crosshair_library/04.cfg", url: "./cfgs/crosshair_library/04.cfg" }
+    {
+      name: "crosshair_library/01.cfg",
+      url: "./cfgs/crosshair_library/01.cfg",
+    },
+    {
+      name: "crosshair_library/02.cfg",
+      url: "./cfgs/crosshair_library/02.cfg",
+    },
+    {
+      name: "crosshair_library/03.cfg",
+      url: "./cfgs/crosshair_library/03.cfg",
+    },
+    {
+      name: "crosshair_library/04.cfg",
+      url: "./cfgs/crosshair_library/04.cfg",
+    },
   ];
 
+  // 3. 创建ZIP实例
+  const zip = new JSZip();
+
   try {
-    // 3. 创建Worker实例
-    const worker = new Worker('/js/zip-worker.js'); 
+    // 4. 循环下载文件并显示进度
+    for (let i = 0; i < filesToPack.length; i++) {
+      const file = filesToPack[i];
+      // 更新进度信息
+      statusMsg.textContent = `正在处理文件 ${i + 1}/${filesToPack.length}: ${
+        file.name
+      }`;
 
-    // 4. 监听Worker消息
-    worker.onmessage = (e) => {
-      switch (e.data.type) {
-        case 'progress':
-          // 更新进度信息
-          const progress = e.data.data;
-          statusMsg.textContent = `正在处理文件 ${progress}/${filesToPack.length}`;
-          break;
-        case 'complete':
-          // 处理生成的ZIP文件
-          const a = document.createElement("a");
-          a.href = URL.createObjectURL(e.data.data);
-          a.download = e.data.zipName || "Allcfgs.zip";
-          document.body.appendChild(a);
-          a.click();
-          document.body.removeChild(a);
-          URL.revokeObjectURL(a.href);
-          statusMsg.textContent = '下载完成!';
-          worker.terminate(); // 终止Worker
-          break;
-        case 'error':
-          throw new Error(e.data.data);
+      const response = await fetch(file.url);
+      if (!response.ok) {
+        throw new Error(`无法获取文件: ${file.name}`);
       }
-    };
+      const content = await response.text();
+      zip.file(file.name, content);
+    }
 
-    // 5. 向Worker发送文件列表
-    worker.postMessage({
-      files: filesToPack,
-      zipName: "Allcfgs.zip"
+    // 5. 生成ZIP并下载
+    statusMsg.textContent = "正在生成压缩文件...";
+    zip.generateAsync({ type: "blob" }).then(function (content) {
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(content);
+      a.download = "Allcfgs.zip";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(a.href);
+
+      // 下载完成
+      statusMsg.textContent = "下载完成!";
     });
-
-    // 6. 监听Worker错误
-    worker.onerror = (error) => {
-      throw new Error(`Worker错误: ${error.message}`);
-    };
-
   } catch (error) {
     console.error("打包失败:", error);
     statusMsg.textContent = `错误: ${error.message}`;
-    statusMsg.style.color = '#dc3545';
+    statusMsg.style.color = "#dc3545";
   } finally {
     // 恢复按钮状态
     setTimeout(() => {
       btn.disabled = false;
-      btn.style.background = '#28a745';
-      loader.style.display = 'none';
-      
-      if (statusMsg.textContent !== '错误: 无法获取文件') {
-        setTimeout(() => statusMsg.textContent = '', 5000);
+      btn.style.background = "#28a745";
+      loader.style.display = "none";
+
+      // 5秒后清除状态消息
+      if (statusMsg.textContent !== "错误: 无法获取文件") {
+        setTimeout(() => (statusMsg.textContent = ""), 5000);
       }
     }, 1000);
   }

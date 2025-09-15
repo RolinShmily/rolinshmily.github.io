@@ -313,12 +313,12 @@ mp_weapons_glow_on_ground 1 // 开启地面武器的高亮显示功能
 # 自用配置分享
 
 <button id="downloadBtn1" onclick="packAndDownload()" style="padding: 8px 16px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px;">
-  <span>打包并打包下载全部CFG文件</span>
+  <span>打包下载全部CFG文件</span>
   <div id="loader1" style="display: none; width: 16px; height: 16px; border: 2px solid rgba(255,255,255,0.3); border-radius: 50%; border-top-color: white; animation: spin 1s ease-in-out infinite;"></div>
 </button>
 <div id="statusMessage1" style="margin-top: 8px; color: #666; font-size: 14px; height: 20px;"></div>
 
-[云盘存储地址](https://openlist.srprolin.top/blog/CS2-CFGS/cfgs)
+[云盘存储地址](https://openlist.srprolin.top/):`./blog/CS2-CFGS/cfgs`
 
 - 下载可能会有延迟，请耐心等待，并且请注意浏览器拦截下载。
 - 下载完成后会得到一个压缩包`Allcfgs.zip`，直接放进 cfg 文件夹，并右击选择“解压到此文件夹“即可。
@@ -479,7 +479,7 @@ mp_weapons_glow_on_ground 1 // 开启地面武器的高亮显示功能
 - 修改了 autoexec 的默认按键绑定与 crosshair_view 的内容
 - 点击`云盘存储地址`查看并下载所更改文件
 - 可以先下载`全部自用配置cfg`,再下载此部分,将修改后的内容覆盖原来的文件.
-  [云盘存储地址](https://openlist.srprolin.top/blog/CS2-CFGS/lulu)
+  [云盘存储地址](https://openlist.srprolin.top/):`./blog/CS2-CFGS/lulu`
 
 <button id="downloadBtn2" onclick="packAndDownloadLulu()" style="padding: 8px 16px; background: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px;">
   <span>打包并下载全部CFG文件(此链接为全部cfg)</span>
