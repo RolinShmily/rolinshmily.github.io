@@ -297,9 +297,9 @@ mp_weapons_glow_on_ground 1 // 开启地面武器的高亮显示功能
   ![](https://cdn.jsdelivr.net/gh/RolinShmily/Images@main/20250721newstart/PixPin_2025-07-25_03-23-37.png)
 
 <link rel="stylesheet" href="/css/CS2_download_button.css">
-<script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
 <script src="/js/CS2_download_zip_button_self.js"></script>
 <script src="/js/CS2_download_zip_button_lulu.js"></script>
+<script src="/js/CS2_mono_file_preview_and_download_table.js"></script>
 <!-- 预览模态框（默认隐藏） -->
 <div class="cfg-preview-modal" id="cfgPreviewModal">
   <div class="cfg-preview-content">
@@ -309,7 +309,6 @@ mp_weapons_glow_on_ground 1 // 开启地面武器的高亮显示功能
     <button class="cfg-download-btn" onclick="downloadCurrentFile()">下载此文件</button>
   </div>
 </div>
-<script src="/js/CS2_mono_file_preview_and_download_table.js"></script>
 
 # 自用配置分享
 
