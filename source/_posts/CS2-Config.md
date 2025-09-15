@@ -479,8 +479,8 @@ mp_weapons_glow_on_ground 1 // 开启地面武器的高亮显示功能
 - 下载可能会有延迟，请耐心等待，并且请注意浏览器拦截下载。
 - 下载完成后会得到一个`AllcfgsForLulu`压缩包，直接放进 cfg 文件夹，并右击选择“解压到此文件夹“即可。
 
-- 点击查看<a href="./cfgs/autoexec.cfg" class="file-link" data-filename="autoexec.cfg">autoexec_ForLulu</a>
-- 点击查看<a href="./cfgs/crosshair_view.cfg" class="file-link" data-filename="crosshair_view.cfg">crosshair_view_ForLulu</a>
+- 点击查看<a href="./lulu/autoexec.cfg" class="file-link" data-filename="autoexec.cfg">autoexec_ForLulu</a>
+- 点击查看<a href="./lulu/crosshair_view.cfg" class="file-link" data-filename="crosshair_view.cfg">crosshair_view_ForLulu</a>
 
 # echo's cfg
 
@@ -498,7 +498,7 @@ mp_weapons_glow_on_ground 1 // 开启地面武器的高亮显示功能
 - 下载可能会有延迟，请耐心等待，并且请注意浏览器拦截下载。
 - 下载完成后会得到一个`AllcfgsForEcho`压缩包，直接放进 cfg 文件夹，并右击选择“解压到此文件夹“即可。
 
-- 点击查看<a href="./cfgs/autoexec.cfg" class="file-link" data-filename="autoexec.cfg">autoexec_ForEcho</a>
+- 点击查看<a href="./echo/autoexec.cfg" class="file-link" data-filename="autoexec.cfg">autoexec_ForEcho</a>
 
 <!-- 预览模态框（默认隐藏） -->
 <div class="cfg-preview-modal" id="cfgPreviewModal">
