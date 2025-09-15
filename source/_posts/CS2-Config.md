@@ -297,6 +297,7 @@ mp_weapons_glow_on_ground 1 // 开启地面武器的高亮显示功能
   ![](https://cdn.jsdelivr.net/gh/RolinShmily/Images@main/20250721newstart/PixPin_2025-07-25_03-23-37.png)
 
 <link rel="stylesheet" href="/css/CS2_download_button.css">
+<script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
 <script src="/js/CS2_download_zip_button_self.js"></script>
 <script src="/js/CS2_download_zip_button_lulu.js"></script>
 <script src="/js/CS2_mono_file_preview_and_download_table.js"></script>
@@ -488,4 +489,4 @@ mp_weapons_glow_on_ground 1 // 开启地面武器的高亮显示功能
 <div id="statusMessage2" style="margin-top: 8px; color: #666; font-size: 14px; height: 20px;"></div>
 
 - 下载可能会有延迟，请耐心等待，并且请注意浏览器拦截下载。
-- 下载完成后会得到一个压缩包，直接放进 cfg 文件夹，并右击选择“解压到此文件夹“即可。
+- 下载完成后会得到一个`AllcfgsForLulu`压缩包，直接放进 cfg 文件夹，并右击选择“解压到此文件夹“即可。

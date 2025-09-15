@@ -1,5 +1,3 @@
-// 首先引入 JSZip 库（使用 CDN 地址）
-importScripts("https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js");
 async function packAndDownload() {
   const btn = document.getElementById("downloadBtn");
   const loader = document.getElementById("loader");
