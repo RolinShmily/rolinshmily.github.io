@@ -296,7 +296,7 @@ mp_weapons_glow_on_ground 1 // 开启地面武器的高亮显示功能
 - 下面的就是快捷轮盘对应槽位的关键词配置
   ![](https://cdn.jsdelivr.net/gh/RolinShmily/Images@main/20250721newstart/PixPin_2025-07-25_03-23-37.png)
 
-<link rel="stylesheet" href="/css/CS2_download_button.css">
+<link rel="stylesheet" href="/css/CS2_download_preview.css">
 <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
 <script src="/js/CS2_download_zip_button_self.js"></script>
 <script src="/js/CS2_download_zip_button_lulu.js"></script>
