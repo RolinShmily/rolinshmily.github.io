@@ -500,6 +500,7 @@ mp_weapons_glow_on_ground 1 // 开启地面武器的高亮显示功能
 
 - 点击查看<a href="./echo/autoexec.cfg" class="file-link" data-filename="autoexec.cfg">autoexec_ForEcho</a>
 
+<link rel="stylesheet" href="/css/CS2_download_preview.css">
 <!-- 预览模态框（默认隐藏） -->
 <div class="cfg-preview-modal" id="cfgPreviewModal">
   <div class="cfg-preview-content">
@@ -510,4 +511,3 @@ mp_weapons_glow_on_ground 1 // 开启地面武器的高亮显示功能
   </div>
 </div>
 <script src="/js/CS2_mono_file_preview_and_download_table.js"></script>
-<link rel="stylesheet" href="/css/CS2_download_preview.css">
