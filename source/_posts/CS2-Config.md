@@ -298,6 +298,8 @@ mp_weapons_glow_on_ground 1 // 开启地面武器的高亮显示功能
 
 # 自用配置分享
 
+> 历史版本详见仓库：[CS2_CFG_Release](https://github.com/RolinShmily/rolinshmily.github.io/releases),下面的按钮、预览和网盘都是最新版。
+
 <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
 <button id="downloadBtn1" onclick="packAndDownload()" style="padding: 8px 16px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px;">
   <span>打包下载全部CFG文件</span>
