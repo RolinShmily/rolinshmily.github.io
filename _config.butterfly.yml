@@ -23,8 +23,7 @@ menu:
   标签: /tags/ || fas fa-tags
   # 相册: /pictures/ || fas fa-images
   # 说说: /shuoshuo/ || fa-regular fa-comment
-  友情链接: /link/ || fas fa-link  
-  音乐: /music/ || fa-solid fa-headphones
+  友情链接: /link/ || fas fa-link
   番剧列表||fas fa-list:
     追番: /bangumis/ || fa-brands fa-bilibili
     追剧: /cinemas/ || fas fa-video
@@ -99,7 +98,7 @@ footer_img: true
 
 # Website Background
 # Can set it to color or image url
-background: 'linear-gradient(20deg, #0062be, #925696, #cc426e, #fb0347)'
+background: "linear-gradient(20deg, #0062be, #925696, #cc426e, #fb0347)"
 
 cover:
   # Disable the cover or not
@@ -107,7 +106,8 @@ cover:
   aside_enable: true
   archives_enable: true
   # When cover is not set, the default cover is displayed
-  default_cover: https://cdn.jsdelivr.net/gh/RolinShmily/Images@main/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20250104113040.png
+  default_cover:
+    https://cdn.jsdelivr.net/gh/RolinShmily/Images@main/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20250104113040.png
     # - xxx.jpg
 
 # Replace Broken Images
@@ -118,7 +118,7 @@ error_img:
 # A simple 404 page
 error_404:
   enable: true
-  subtitle: 'Page Not Found'
+  subtitle: "Page Not Found"
   background: https://i.loli.net/2020/05/19/aKOcLiyPl2JQdFD.png
 
 post_meta:
@@ -344,7 +344,7 @@ aside:
     # The title shows the series name
     series_title: false
     # Order by title or date
-    orderBy: 'date'
+    orderBy: "date"
     # Sort of order. 1, asc for ascending; -1, desc for descending
     order: -1
   card_webinfo:
@@ -355,7 +355,7 @@ aside:
     # Time difference between publish date and now
     # Formal: Month/Day/Year Time or Year/Month/Day Time
     # Leave it empty if you don't enable this feature
-    runtime_date: 2024-06-22 
+    runtime_date: 2024-06-22
 
 # --------------------------------------
 # Bottom right button
@@ -374,9 +374,9 @@ translate:
   # Time delay
   translateDelay: 0
   # The text of the button when the language is Simplified Chinese
-  msgToTraditionalChinese: '繁'
+  msgToTraditionalChinese: "繁"
   # The text of the button when the language is Traditional Chinese
-  msgToSimplifiedChinese: '簡'
+  msgToSimplifiedChinese: "簡"
 
 # Read Mode
 readmode: true
@@ -471,7 +471,7 @@ math:
 # Search
 # --------------------------------------
 
-search: 
+search:
   # Choose: algolia_search / local_search / docsearch
   # leave it empty if you don't need search
   use: local_search
@@ -571,12 +571,12 @@ gitalk:
 # Valine
 # https://valine.js.org
 valine:
-  appId: 
-  appKey: 
+  appId:
+  appKey:
   avatar: monsterid
   # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)
   serverURLs:
-  bg: 
+  bg:
   # Use Valine visitor count as the page view count
   visitor: false
   option:
@@ -803,7 +803,7 @@ beautify:
   # Specify the icon to be used as a prefix for the title, such as '\f0c1'
   title_prefix_icon: '\f0c1'
   # Specify the color of the title prefix icon, such as '#F47466'
-  title_prefix_icon_color: '#F47466'
+  title_prefix_icon_color: "#F47466"
 
 # Global font settings
 # Don't modify the following settings unless you know how they work
@@ -858,7 +858,7 @@ canvas_fluttering_ribbon:
 canvas_nest:
   enable: false
   # Color of lines, default: '0,0,0'; RGB values: (R,G,B).(note: use ',' to separate.)
-  color: '0,0,255'
+  color: "0,0,255"
   # The opacity of line (0~1)
   opacity: 0.7
   # The z-index property of the background
@@ -907,7 +907,7 @@ lightbox: fancybox
 series:
   enable: false
   # Order by title or date
-  orderBy: 'title'
+  orderBy: "title"
   # Sort of order. 1, asc for ascending; -1, desc for descending
   order: 1
   number: true
@@ -937,16 +937,16 @@ chartjs:
   # The default settings are only used when the MD syntax is not specified.
   # General font color for the chart
   fontColor:
-    light: 'rgba(0, 0, 0, 0.8)'
-    dark: 'rgba(255, 255, 255, 0.8)'
+    light: "rgba(0, 0, 0, 0.8)"
+    dark: "rgba(255, 255, 255, 0.8)"
   # General border color for the chart
   borderColor:
-    light: 'rgba(0, 0, 0, 0.1)'
-    dark: 'rgba(255, 255, 255, 0.2)'
+    light: "rgba(0, 0, 0, 0.1)"
+    dark: "rgba(255, 255, 255, 0.2)"
   # Background color for scale labels on radar and polar area charts
   scale_ticks_backdropColor:
-    light: 'transparent'
-    dark: 'transparent'
+    light: "transparent"
+    dark: "transparent"
 
 # Note - Bootstrap Callout
 note:
@@ -975,8 +975,8 @@ pjax:
 
 # Inject the css and script (aplayer/meting)
 aplayerInject:
-  enable: true
-  per_page: true
+  enable: false
+  per_page: false
 
 # Snackbar - Toast Notification
 # https://github.com/polonel/SnackBar
@@ -985,8 +985,8 @@ snackbar:
   enable: false
   position: bottom-left
   # The background color of Toast Notification in light mode and dark mode
-  bg_light: '#49b1f5'
-  bg_dark: '#1f1f1f'
+  bg_light: "#49b1f5"
+  bg_dark: "#1f1f1f"
 
 # Instant.page
 # https://instant.page/
@@ -1038,7 +1038,6 @@ inject:
   head:
     # - <link rel="stylesheet" href="/xxx.css">
   bottom:
-    - <div class="aplayer no-destroy" data-id="14151567216" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="false" data-theme ="#80C8F8"> </div>
 
 # CDN Settings
 # Don't modify the following settings unless you know how they work
@@ -1113,4 +1112,3 @@ CDN:
     # valine:
     # waline_css:
     # waline_js:
-
