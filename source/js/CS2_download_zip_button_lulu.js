@@ -15,7 +15,6 @@ async function packAndDownloadLulu() {
     { name: "crosshair_view.cfg", url: "./lulu/crosshair_view.cfg" },
     { name: "demo_hlae.cfg", url: "./cfgs/demo_hlae.cfg" },
     { name: "knife.cfg", url: "./cfgs/knife.cfg" },
-    { name: "lastinv.cfg", url: "./cfgs/lastinv.cfg" },
     { name: "train.cfg", url: "./cfgs/train.cfg" },
     { name: "zeus.cfg", url: "./cfgs/zeus.cfg" },
     { name: "spawn/ancient.cfg", url: "./cfgs/spawn/ancient.cfg" },

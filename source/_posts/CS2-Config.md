@@ -411,16 +411,6 @@ mp_weapons_glow_on_ground 1 // 开启地面武器的高亮显示功能
 - 注意控制台导航信息
 - “j”键启用，命令完成后有聊天框提示
 
-## lastinv.cfg
-
-> 2025.8.15 更新：此 cfg 已不再适用，Valve 在更新中使切装备动画在衔接检视时的延迟变为 0，此 cfg 效果可以由在切换装备前按住“检视键”来实现。
-
-- `切刀自动检视Config`：<a href="./cfgs/lastinv.cfg" class="file-link" data-filename="lastinv.cfg">lastinv.cfg</a>
-- - 单击`(Click)`查看文件，`Ctrl+单击(click)`下载文件。（请注意浏览器拦截下载）
-- “弯刀”专用，规避了切刀时的双手拔刀动作，而是直接检视
-- 注意该配置重写了 Q 键(更换为最近装备)、1 键(主武器)、2 键(副武器)、3 键(匕首刀)的逻辑，请不要修改这 4 个按键的默认功能。
-- “/”键启用，启用后“.”键取消该设置，与弯刀搭配使用，避免了切刀时的双手动作。
-
 ## zeus.cfg
 
 - `电击枪即用即切Config`：<a href="./cfgs/zeus.cfg" class="file-link" data-filename="zeus.cfg">zeus.cfg</a>
