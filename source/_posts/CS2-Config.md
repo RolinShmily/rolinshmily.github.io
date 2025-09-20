@@ -298,7 +298,7 @@ mp_weapons_glow_on_ground 1 // 开启地面武器的高亮显示功能
 
 # 自用配置分享
 
-> 历史版本详见仓库：[CS2_CFG_Release](https://github.com/RolinShmily/rolinshmily.github.io/releases),下面的按钮、预览和网盘都是最新版。
+> 历史版本详见仓库：[CS2_CFG_SrP by_RoL1n](https://github.com/RolinShmily/rolinshmily.github.io/releases),下面的按钮、预览和网盘都是最新版。
 
 <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
 <button id="downloadBtn1" onclick="packAndDownload()" style="padding: 8px 16px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px;">
@@ -331,6 +331,78 @@ mp_weapons_glow_on_ground 1 // 开启地面武器的高亮显示功能
 - - 单击`(Click)`查看文件，`Ctrl+单击(click)`下载文件。（请注意浏览器拦截下载）
 - 注意查看控制台导航信息。
 
+- 请注意`zeus.cfg`是被默认启动的，他影响了`1`、`2`、`3`、`4`、`5`、`q` 键的功能，请不要修改默认的绑定对。
+
+| 功能 | 快捷键 | 控制台别名 |
+| :---: | :---: | :---: |
+| 前进 | W | - |
+| 后退 | S | - |
+| 向左 | A | - |
+| 向右 | D | - |
+| 普通攻击 | 鼠标左键 | - |
+| 特殊攻击 | 鼠标右键 | - |
+| 使用 | E | - |
+| 装填弹药 | R | - |
+| 检视 | F | - |
+| 跳跃 | 空格/滚轮上下 | - |
+| 蹲下 | Ctrl | - |
+| 显示计分板 | TAB | - |
+| 丢弃物品 | G | - | 
+| 选择队伍 | M | - |
+| 静步 | Shift | - |
+| 购买菜单 | B | - |
+| 主武器 | 1 | - |
+| 副武器 | 2 | - |
+| 匕首 | 3 | - |
+| 电击枪 | 4 | - |
+| C4 | 5 | - |
+| 雷 | Z | - |
+| 火 | V | - |
+| 闪 | X | - |
+| 烟 | C | - |
+| 诱饵弹 | 6 | - |
+| 切换为最近武器 | Q | - |
+| 喷漆 | Y | - |
+| 团队聊天 | U | - |
+| 全体聊天 | I | - |
+| 语音 | 后侧键 | - |
+| 快捷聊天轮盘 | Alt | - |  
+| 标点 | 前侧键 | - |
+| 控制台 | ` | - |
+| 切换左右手 | T | - |
+| 雷达缩放 | H | - |
+| 队友头顶标识 | N | - |
+| 无线电菜单、医疗针 | ‘ | - |
+| 仅显示准星与击杀信息 | - | - |
+| 显示/关闭雷达 | = | - |
+| 投票同意 | F1 | - |
+| 投票拒绝 | F2 | - |
+| 购买手枪第五槽位 | F3 | - |
+| 购买步枪第二槽位 | F4 | - |
+| 购买手雷 | F5 | - |
+| 购买闪光 | F6 | - |
+| 购买烟雾 | F7 | - |
+| 购买燃烧弹 | F8 | - |
+| 购买半甲 | F9 | - |
+| 购买全甲 | F10 | - |
+| 购买钳子 | F11 | - |
+| 出售所有装备 | 退格键 | - |
+| 总音量30% | Delete | - |
+| 重启autoexec | O | exec autoexec |
+| 匕首模型更换 | J | exec knife |
+| 跑图训练 | P | exec train |
+| 准星、持枪视角预设 | [ | exec crosshair_view |
+| demo预设 | ] | exec demo_hlae |
+| 平台发刀 | K | say !drop |
+| 5E平台报伤害 | \ | say .hp |
+| 默认左手持枪 | - | lefthand |
+| 关闭狙击开枪后自动开镜 | - | debounce |
+| 禁用卸下消音器 | - | silencer |
+| 显示对局头像 | - | avatars |
+| 显示对局人数 | - | numbers | 
+| 关闭曳光弹 | - | tracer |
+| 启用快捷轮盘标点 | - | ping |
+
 ## train.cfg
 
 - `跑图Config`：<a href="./cfgs/train.cfg" class="file-link" data-filename="train.cfg">train.cfg</a>
@@ -338,12 +410,60 @@ mp_weapons_glow_on_ground 1 // 开启地面武器的高亮显示功能
 - 注意查看控制台导航信息。
 - “p”键启用，出生点预设参考于 **Bad0RANG3** ，项目地址：https://github.com/Bad0RANG3/CS2PraticeCFG ，个人空间：https://space.bilibili.com/482966540
 
+| 功能 | 快捷键 | 控制台别名 |
+| :---: | :---: | :---: |
+| 切换队友头顶显示 | ralt(右alt键) | - |
+| 弹着点、投掷物轨迹 | ↑ | - |
+| 杀死Bot | ↓ | - |
+| 实时预测道具轨迹 | ← | - |
+| 重新开始 | → | - |
+| 补全护甲 | F1 | - |
+| 自动回血 | F2 | - |
+| 取消摔落伤害 | F3 | - |
+| 添加Bot | F4 | - |
+| 使Bot蹲下 | F5 | - | 
+| 使机器人模仿你的操作 | F6 | - |
+| 视角放大镜 | F7 | - |
+| 删除Bot | F8 | - |
+| Bhop连跳 | F12 | - |
+| 重现最近一次道具 | L | - |
+| 加速时间流逝 | 0 | - |
+| 放置Bot | 后侧键 | - |
+| 飞行模式 | N | - |
+| 显示速度信息等 | K | - |
+| 标准实战模拟 | - | gkd |
+| 恢复跑图模式 | - | gg |
+| 加载出生点预设 | - | spawn |
+
 > 注意以下 cfg 都需要存放在游戏全局 cfg 文件夹下的 spawn 文件夹内，比如 **...\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\game\csgo\cfg\spawn** 或 **...\Steam\steamapps\common\Counter-Strike Global Offensive\game\csgo\cfg\spawn** 下。
 
 ### spawn.cfg
 
 - `重生点控制台Config`：<a href="./cfgs/spawn/spawn.cfg" class="file-link" data-filename="spawn.cfg">spawn.cfg</a>
 - - 单击`(Click)`查看文件，`Ctrl+单击(click)`下载文件。（请注意浏览器拦截下载）
+
+- 在跑图模式控制台输入`spawn`后，其功能是启用该cfg`exec spawn`。
+- 请先选择地图，再输入出生点别名。
+
+| 地图 | 控制台别名 |
+| :---: | :---: |
+| 炼狱小镇 | inferno |
+| 沙漠2 | dust2 |
+| 荒漠迷城 | mirage |
+| 远古遗迹 | ancient |
+| 核子危机 | nuke |
+| 殒命大厦 | vertigo |
+| 阿努比斯 | anubis |
+| 办公室 | office |
+| 意大利 | italy |
+
+| 出生位 | 控制台别名 |
+| :---: | :---: |
+| 警察1号出生点 | CT1 |
+| 警察2号出生点 | CT2 |
+| 匪徒3号出生点 | T3 |
+| 匪徒4号出生点 | T4 |
+| ... | ... |
 
 ### vertigo.cfg
 
@@ -402,16 +522,89 @@ mp_weapons_glow_on_ground 1 // 开启地面武器的高亮显示功能
 - `观赛Config`：<a href="./cfgs/demo_hlae.cfg" class="file-link" data-filename="demo_hlae.cfg">demo_hlae.cfg</a>
 - - 单击`(Click)`查看文件，`Ctrl+单击(click)`下载文件。（请注意浏览器拦截下载）
 - 集成了一些 HLAE 和 demo 的实用指令的快捷键
+- 该cfg完整功能需要安装HLAE和正确配置FFmpeg
 - 修改自 Purp1e 的 cfg：https://github.com/Purple-CSGO/CSGO-Config-Presets
 - 整合了 hale 的动态模糊录制功能，来自 YouTube:https://www.youtube.com/watch?v=4zq27TcpfVg
 - "]"键启用，注意查看控制台导航信息。
+
+| 功能 | 快捷键 | 控制台别名 |
+| :---: | :---: | :---: |
+| demoUI开关 | Q/shift+F2 | demoui |
+| 标记当前时间tick | Y | - |
+| 跳转标记时间tick | U | - |
+| 镜头摆放模式(ESC退出) | T | - |
+| 添加镜头 | Capslock | - |
+| 清空镜头 | Delete | - |
+| 镜头激活 | I | - |
+| 镜头轨迹 | O | - | 
+| demo暂停 | P/鼠标中键 | - |
+| 只保留准星和击杀 | H | - |
+| 只显示当前玩家击杀信息 | J | - |
+| 开关CSGO语音 | K | - |
+| 开关CS2语音 | ' | - | 
+| 查看当前玩家信息和语音屏蔽 | L | - |
+| 队友头顶标识 | ralt | - |
+| X光透视 | X | - |
+| 准星 | V | - |
+| hud开关 | B | - |
+| 雷达 | N | - |
+| 静音 | M | - |
+| 快退5s | , | - |
+| 快进5s | . | - |
+| +播放速度 | 前侧键 | - |
+| - 播放速度 | 后侧键 | - |
+| 运镜回退0.25s | [ | - |
+| 运镜快进0.25s | ] | - |
+| 切换击杀信息显示 | \ | ass |
+| 广角POV | = | - |
+| 开启HLAE录制 | ↑ | - |
+| 关闭HLAE录制 | ↓ | - |
+| 设置当前tick开始录制 | F5 | - |
+| 设置当前tick结束录制 | F6 | - |
+| 打印mirv_cmd信息 | F7 | - | 
+| 清除mirv_cmd指令 | F8 | - | 
+| 开关VGUI(Reshade功能) | F9 | - |
+| 开启动态模糊录制 | - | bluron |
+| 关闭动态模糊录制 | - | bluroff | 
+| 关闭BGM、MVP、无线电等 | - | mute |
+| 解绑运镜模式按键 | - | t |
+| 回合开始无灰色 | - | post |
+| 使运镜开始为当前视角 | - | pos |
+| 使运镜开始为当前tick | - | time |
+| 运镜模式的FOV修改 | - | f10、f15、... f100 |
+| 显示对局头像 | - | avatars |
+| 显示对局人数 | - | numbers |
 
 ## knife.cfg
 
 - `匕首模型更换Config`：<a href="./cfgs/knife.cfg" class="file-link" data-filename="knife.cfg">knife.cfg</a>
 - - 单击`(Click)`查看文件，`Ctrl+单击(click)`下载文件。（请注意浏览器拦截下载）
 - 注意控制台导航信息
-- “j”键启用，命令完成后有聊天框提示
+- “j”键启用，命令完成后有控制台提示
+
+| 刀具模型 | 控制台别名 |
+| :---: | :---: |
+| 刺刀 | 500 |
+| 海豹短刀 | 503 |
+| 折叠刀 | 505 |
+| 穿肠刀 | 506 |
+| 爪子刀 | 507 |
+| M9刺刀 | 508 |
+| 猎杀者匕首 | 509 |
+| 弯刀 | 512 |
+| 鲍伊猎刀 | 514 |
+| 蝴蝶刀 | 515 |
+| 暗影双匕 | 516 |
+| 系绳匕首 | 517 |
+| 求生匕首 | 518 |
+| 熊刀 | 519 |
+| 折刀 | 520 |
+| 流浪者匕首 | 521 |
+| 短剑 | 522 |
+| 锯齿爪刀 | 523 |
+| 默认匕首 | 524 |
+| 骷髅匕首 | 525 |
+| 尼泊尔 | 526 |
 
 ## zeus.cfg
 
@@ -428,6 +621,41 @@ mp_weapons_glow_on_ground 1 // 开启地面武器的高亮显示功能
 - 准星与持枪视角的存储与即时更换
 - 若更换准星必须搭配 crosshair_library 准星代码库使用
 - "["键启用，注意查看控制台导航信息。
+
+| 功能 | 快捷键 | 控制台别名 |
+| :---: | :---: | :---: |
+| 开关T型准星 | ← | - |
+| 开关准星中心点 | → | - |
+| 关闭投掷物准星 | ↑ | nothrow |
+| 开启投掷物准星 | ↓ | throw |
+| 更改准星颜色为... | ... | ... |
+| 红色 | - | red |
+| 橙色 | - | orange |
+| 黄色 | - | yellow | 
+| 绿色 | - | green | 
+| 青色 | - | cyan |
+| 蓝色 | - | blue |
+| 紫色 | - | purple |
+| 黑色 | - | black |
+| 白色 | - | white |
+| 粉色 | - | pink |
+| 棕色 | - | brown |
+| 灰色 | - | gray |
+| 投掷时保持玩家自定义准星 | - | keep |
+| 输入...切换准星/持枪视角 | ... | ... |
+| 0号准星 | - | c00 |
+| 1号准星 | - | c01 |
+| 2号准星 | - | c02 |
+| 3号准星 | - | c03 |
+| 4号准星 | - | c04 |
+| 5号准星 | - | c05 |
+| 0号视角 | - | v00 |
+| 1号视角 | - | v01 |
+| 2号视角 | - | v02 |
+| 3号视角 | - | v03 | 
+| 4号视角 | - | v04 |
+| 5号视角 | - | v05 |
+
 - Tips: 如果你有能力，可以自己根据代码魔改，将源代码绑定按键，实现一键切换准星/持枪视角。
   > 由于 Valve 的脚本指令单条有长度限制，而准星参数的设置已经超过该限制，故直接用 cfg 文件来保存准星预设。
   > 注意以下 cfg 都需要存放在游戏全局 cfg 文件夹下的 crosshair_library 文件夹内，比如 **...\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\game\csgo\cfg\crosshair_library** 或 **...\Steam\steamapps\common\Counter-Strike Global Offensive\game\csgo\cfg\crosshair_library** 下。
@@ -451,6 +679,10 @@ mp_weapons_glow_on_ground 1 // 开启地面武器的高亮显示功能
 - `04号准星Config`：<a href="./cfgs/crosshair_library/04.cfg" class="file-link" data-filename="04.cfg">04.cfg</a>
 - - 单击`(Click)`查看文件，`Ctrl+单击(click)`下载文件。（请注意浏览器拦截下载）
 - 准星代码: `CSGO-pqEaF-5AKXB-DCdnh-vpxAJ-94GSQ`
+
+- `05号准星Config`：<a href="./cfgs/crosshair_library/05.cfg" class="file-link" data-filename="05.cfg">05.cfg</a>
+- - 单击`(Click)`查看文件，`Ctrl+单击(click)`下载文件。（请注意浏览器拦截下载）
+- 准星代码: `CSGO-Q4APO-buiyc-i9V7H-7sxJN-Zy8rN`
 
 ---
 
