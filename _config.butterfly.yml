@@ -11,7 +11,7 @@
 
 nav:
   # Navigation bar logo image
-  logo:
+  logo: https://cdn.jsdelivr.net/gh/RolinShmily/Images@main/hexo/1758268329514.png
   display_title: true
   # Whether to fix navigation bar
   fixed: false
