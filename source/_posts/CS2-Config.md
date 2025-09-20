@@ -402,6 +402,9 @@ mp_weapons_glow_on_ground 1 // 开启地面武器的高亮显示功能
 | 显示对局人数 | - | numbers | 
 | 关闭曳光弹 | - | tracer |
 | 启用快捷轮盘标点 | - | ping |
+| 强制方形小地图 | - | squareon |
+| POV圆形小地图 | - | squareoff |
+| 计分板圆形小地图 | - | round |
 
 ## train.cfg
 
