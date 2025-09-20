@@ -9,18 +9,17 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      
       - name: Checkout source
         uses: actions/checkout@v4
         with:
           ref: main
           submodules: recursive
-      
+
       - name: Use Node.js 23
         uses: actions/setup-node@v4
         with:
-          node-version: '23'
-      
+          node-version: "23"
+
       - name: Cache NPM dependencies
         uses: actions/cache@v4
         with:
@@ -28,22 +27,24 @@ jobs:
           key: ${{ runner.OS }}-npm-cache-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.OS }}-npm-cache-
-      
+
       - name: Install Dependencies
         run: |
           npm install hexo-cli -g
           npm install
-      
+
       - name: Build
         run: |
           hexo clean
+          hexo bangumi -u
+          hexo cinema -u
           hexo generate
-      
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
-  
+
   deploy:
     needs: build
     permissions:
@@ -59,7 +60,7 @@ jobs:
         uses: actions/deploy-pages@v4
 
   refresh-cdn:
-    needs: deploy  
+    needs: deploy
     runs-on: ubuntu-latest
     steps:
       # 拉取仓库代码
@@ -69,7 +70,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.9'
+          python-version: "3.9"
 
       # 安装Python依赖并执行CDN刷新脚本
       - name: Refresh CDN Cache
@@ -77,7 +78,7 @@ jobs:
           # 安装Python SDK
           python -m pip install --upgrade pip
           pip install aliyun-python-sdk-cdn aliyun-python-sdk-core
-          
+
           # 使用绝对路径和引号包裹参数
           python ${{ github.workspace }}/ScriptsForRefreshCDN/Refresh.py \
             -i "${{ secrets.ALIYUN_ACCESS_KEY_ID }}" \

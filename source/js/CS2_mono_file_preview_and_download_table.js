@@ -1,40 +1,53 @@
 // 存储当前预览的文件信息
 let currentFileInfo = null;
 
-// 监听所有CFG链接的点击事件
-document.querySelectorAll(".file-link").forEach((link) => {
-  link.addEventListener("click", async (e) => {
-    // 先强制阻止默认行为（关键修复）
-    e.preventDefault();
-    e.stopPropagation();
+// 确保DOM加载完成后再执行
+document.addEventListener('DOMContentLoaded', function() {
+  // 监听所有文件链接的点击事件
+  document.querySelectorAll(".file-link").forEach((link) => {
+    // 移除可能存在的其他点击事件监听器
+    const newLink = link.cloneNode(true);
+    link.parentNode.replaceChild(newLink, link);
+    
+    // 重新添加点击事件
+    newLink.addEventListener("click", async (e) => {
+      // 强制阻止所有默认行为
+      e.preventDefault();
+      e.stopImmediatePropagation();
+      
+      // 移除href属性的临时引用，防止意外跳转
+      const fileUrl = newLink.href;
+      newLink.removeAttribute('href');
+      
+      // 判断是否按下Ctrl/Command键
+      const isCtrlPressed = e.ctrlKey || e.metaKey;
 
-    // 判断是否按下Ctrl/Command键（用于下载）
-    const isCtrlPressed = e.ctrlKey || e.metaKey;
+      if (isCtrlPressed) {
+        // Ctrl+单击：下载
+        const fileName = newLink.dataset.filename;
+        downloadFile(fileUrl, fileName);
+      } else {
+        // 普通单击：预览
+        const fileName = newLink.dataset.filename;
 
-    if (isCtrlPressed) {
-      // Ctrl+单击：下载
-      const fileUrl = link.href;
-      const fileName = link.dataset.filename;
-      downloadFile(fileUrl, fileName);
-    } else {
-      // 普通单击：预览
-      const fileUrl = link.href;
-      const fileName = link.dataset.filename;
+        try {
+          const response = await fetch(fileUrl);
+          if (!response.ok) throw new Error("文件不存在或无法访问");
+          const content = await response.text();
 
-      try {
-        const response = await fetch(fileUrl);
-        if (!response.ok) throw new Error("文件不存在或无法访问");
-        const content = await response.text();
-
-        currentFileInfo = { url: fileUrl, name: fileName };
-        document.getElementById("previewFileName").textContent = fileName;
-        document.getElementById("previewContent").textContent = content;
-        document.getElementById("cfgPreviewModal").style.display = "block";
-      } catch (error) {
-        console.error("预览失败:", error);
-        alert("无法预览文件：" + error.message);
+          // 显示预览框
+          document.getElementById("previewFileName").textContent = fileName;
+          document.getElementById("previewContent").textContent = content;
+          document.getElementById("cfgPreviewModal").style.display = "block";
+        } catch (error) {
+          console.error("预览失败:", error);
+          alert("无法预览文件：" + error.message);
+        }
       }
-    }
+      
+      // 恢复href属性，以便后续可能的操作
+      newLink.href = fileUrl;
+    });
   });
 });
 
