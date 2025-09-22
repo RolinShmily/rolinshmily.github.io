@@ -15,7 +15,7 @@ async function packAndDownload() {
     { name: "crosshair_view.cfg", url: "./cfgs/crosshair_view.cfg" },
     { name: "demo_hlae.cfg", url: "./cfgs/demo_hlae.cfg" },
     { name: "knife.cfg", url: "./cfgs/knife.cfg" },
-    { name: "train.cfg", url: "./cfgs/train.cfg" },
+    { name: "practice.cfg", url: "./cfgs/practice.cfg" },
     { name: "zeus.cfg", url: "./cfgs/zeus.cfg" },
     { name: "spawn/ancient.cfg", url: "./cfgs/spawn/ancient.cfg" },
     { name: "spawn/anubis.cfg", url: "./cfgs/spawn/anubis.cfg" },
@@ -28,6 +28,8 @@ async function packAndDownload() {
     { name: "spawn/office.cfg", url: "./cfgs/spawn/office.cfg" },
     { name: "spawn/spawn.cfg", url: "./cfgs/spawn/spawn.cfg" },
     { name: "spawn/vertigo.cfg", url: "./cfgs/spawn/vertigo.cfg" },
+    { name: "spawn/train.cfg", url: "./cfgs/spawn/train.cfg" },
+    { name: "spawn/overpass.cfg", url: "./cfgs/spawn/overpass.cfg" },
     {
       name: "crosshair_library/01.cfg",
       url: "./cfgs/crosshair_library/01.cfg",
@@ -43,6 +45,10 @@ async function packAndDownload() {
     {
       name: "crosshair_library/04.cfg",
       url: "./cfgs/crosshair_library/04.cfg",
+    },
+    {
+      name: "crosshair_library/05.cfg",
+      url: "./cfgs/crosshair_library/05.cfg",
     },
   ];
 
