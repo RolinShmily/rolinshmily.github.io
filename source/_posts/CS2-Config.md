@@ -162,6 +162,9 @@ cl_teammate_colors_show 2 // 设置队友颜色显示模式，2表示显示队�
 ```ini
 "video.cfg"
 {
+	"Version"		"16"  // 配置文件版本号
+	"VendorID"		"4318"  // 显卡厂商识别码，此处为NVIDIA
+	"DeviceID"		"10464"  // 显卡设备识别码，此处为RTX 4060
 	"setting.cpu_level"		"3" // CPU 性能等级（0-3，3 为最高）
 	"setting.gpu_mem_level"		"3" // GPU 显存性能等级（0-3，3 为最高）
 	"setting.gpu_level"		"3" // GPU 性能等级（0-3，3 为最高）
@@ -169,11 +172,11 @@ cl_teammate_colors_show 2 // 设置队友颜色显示模式，2表示显示队�
 	"setting.monitor_index"		"0" // 显示器索引（0 为主显示器）
 	"setting.defaultres"		"1280" // 分辨率宽度
 	"setting.defaultresheight"		"960" // 分辨率高度
-	"setting.aspectratiomode"		"1" // 宽高比模式（0 为自动，1 为 4:3，2 为 16:9）
-	"setting.refreshrate_numerator"		"180" // 刷新率分子（0 表示使用默认值）
-	"setting.refreshrate_denominator"		"1" // 刷新率分母（0 表示使用默认值）
+	"setting.aspectratiomode"		"0" // 宽高比模式（0 为自动，1 为 4:3，2 为 16:9）
+	"setting.refreshrate_numerator"		"0" // 刷新率分子（0 表示使用默认值）
+	"setting.refreshrate_denominator"		"0" // 刷新率分母（0 表示使用默认值）
 	"setting.fullscreen"		"0" // 是否启用全屏模式（0 为否，1 为是）
-	"setting.coop_fullscreen"		"0" // 合作模式是否启用全屏（1 为是）
+	"setting.coop_fullscreen"		"1" // 合作模式是否启用全屏（1 为是）
 	"setting.nowindowborder"		"1" // 是否启用无边框窗口模式（1 为是）
 	"setting.fullscreen_min_on_focus_loss"		"0" // 失去焦点时是否最小化全屏窗口（0 为否）
 	"setting.high_dpi"		"0" // 是否启用高 DPI 缩放（0 为否）
@@ -387,7 +390,7 @@ mp_weapons_glow_on_ground 1 // 开启地面武器的高亮显示功能
 |       总音量 30%       |    Delete     |          -          |
 |     重启 autoexec      |       O       |    exec autoexec    |
 |      匕首模型更换      |       J       |     exec knife      |
-|        跑图训练        |       P       |     exec practice      |
+|        跑图训练        |       P       |    exec practice    |
 |   准星、持枪视角预设   |       [       | exec crosshair_view |
 |       demo 预设        |       ]       |   exec demo_hlae    |
 |        平台发刀        |       K       |      say !drop      |
@@ -413,7 +416,7 @@ mp_weapons_glow_on_ground 1 // 开启地面武器的高亮显示功能
 |         功能         |     快捷键      | 控制台别名 |
 | :------------------: | :-------------: | :--------: |
 |   切换队友头顶显示   | ralt(右 alt 键) |     -      |
-|       弹着点 		  |        ↑        |     -      |
+|        弹着点        |        ↑        |     -      |
 |       杀死 Bot       |        ↓        |     -      |
 |   实时预测道具轨迹   |        ←        |     -      |
 |       重新开始       |        →        |     -      |
@@ -445,20 +448,19 @@ mp_weapons_glow_on_ground 1 // 开启地面武器的高亮显示功能
 - 在跑图模式控制台输入`spawn`后，其功能是启用该 cfg`exec spawn`。
 - 请先选择地图，再输入出生点别名。
 
-|   地图   | 控制台别名 |
-| :------: | :--------: |
-| 炼狱小镇 |  inferno   |
-|  沙漠 2  |   dust2    |
-| 荒漠迷城 |   mirage   |
-| 远古遗迹 |  ancient   |
-| 核子危机 |    nuke    |
-| 殒命大厦 |  vertigo   |
-| 阿努比斯 |   anubis   |
-|  办公室  |   office   |
-|  意大利  |   italy    |
-| 列车停放站 | train |
-| 死亡游乐园 | overpass |
-
+|    地图    | 控制台别名 |
+| :--------: | :--------: |
+|  炼狱小镇  |  inferno   |
+|   沙漠 2   |   dust2    |
+|  荒漠迷城  |   mirage   |
+|  远古遗迹  |  ancient   |
+|  核子危机  |    nuke    |
+|  殒命大厦  |  vertigo   |
+|  阿努比斯  |   anubis   |
+|   办公室   |   office   |
+|   意大利   |   italy    |
+| 列车停放站 |   train    |
+| 死亡游乐园 |  overpass  |
 
 |     出生位      | 控制台别名 |
 | :-------------: | :--------: |
@@ -587,8 +589,8 @@ mp_weapons_glow_on_ground 1 // 开启地面武器的高亮显示功能
 |    运镜模式的 FOV 修改     |     -      | f10、f15、... f100 |
 |        显示对局头像        |     -      |      avatars       |
 |        显示对局人数        |     -      |      numbers       |
-| 显示小字 | - | show |
-| 屏蔽小字 | - | noshow |
+|          显示小字          |     -      |        show        |
+|          屏蔽小字          |     -      |       noshow       |
 
 ## knife.cfg
 
