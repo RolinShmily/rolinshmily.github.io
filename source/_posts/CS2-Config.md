@@ -165,10 +165,10 @@ cl_teammate_colors_show 2 // 设置队友颜色显示模式，2表示显示队�
 	"Version"		"16"  // 配置文件版本号
 	"VendorID"		"4318"  // 显卡厂商识别码，此处为NVIDIA
 	"DeviceID"		"10464"  // 显卡设备识别码，此处为RTX 4060
-	"setting.cpu_level"		"3" // CPU 性能等级（0-3，3 为最高）
-	"setting.gpu_mem_level"		"3" // GPU 显存性能等级（0-3，3 为最高）
-	"setting.gpu_level"		"3" // GPU 性能等级（0-3，3 为最高）
-	"setting.knowndevice"		"0" // 是否识别为已知设备（0 为否，1 为是）
+	"setting.cpu_level"		"3" // CPU 性能等级梯队
+	"setting.gpu_mem_level"		"3" // GPU 显存性能等级梯队
+	"setting.gpu_level"		"3" // GPU 性能等级梯队
+	"setting.knowndevice"		"0" // 优先使用的GPU设备（0 为主显卡）
 	"setting.monitor_index"		"0" // 显示器索引（0 为主显示器）
 	"setting.defaultres"		"1280" // 分辨率宽度
 	"setting.defaultresheight"		"960" // 分辨率高度
