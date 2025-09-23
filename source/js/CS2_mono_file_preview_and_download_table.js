@@ -2,23 +2,23 @@
 let currentFileInfo = null;
 
 // 确保DOM加载完成后再执行
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", function () {
   // 监听所有文件链接的点击事件
   document.querySelectorAll(".file-link").forEach((link) => {
     // 移除可能存在的其他点击事件监听器
     const newLink = link.cloneNode(true);
     link.parentNode.replaceChild(newLink, link);
-    
+
     // 重新添加点击事件
     newLink.addEventListener("click", async (e) => {
       // 强制阻止所有默认行为
       e.preventDefault();
       e.stopImmediatePropagation();
-      
+
       // 移除href属性的临时引用，防止意外跳转
       const fileUrl = newLink.href;
-      newLink.removeAttribute('href');
-      
+      newLink.removeAttribute("href");
+
       // 判断是否按下Ctrl/Command键
       const isCtrlPressed = e.ctrlKey || e.metaKey;
 
@@ -35,6 +35,12 @@ document.addEventListener('DOMContentLoaded', function() {
           if (!response.ok) throw new Error("文件不存在或无法访问");
           const content = await response.text();
 
+          // 存储当前预览文件信息，供下载按钮使用
+          currentFileInfo = {
+            url: fileUrl,
+            name: fileName,
+          };
+
           // 显示预览框
           document.getElementById("previewFileName").textContent = fileName;
           document.getElementById("previewContent").textContent = content;
@@ -44,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
           alert("无法预览文件：" + error.message);
         }
       }
-      
+
       // 恢复href属性，以便后续可能的操作
       newLink.href = fileUrl;
     });
