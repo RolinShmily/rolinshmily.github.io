@@ -59,7 +59,7 @@ social:
 # Image Settings
 # --------------------------------------
 
-favicon: /img/favicon.png
+favicon: https://cdn.jsdelivr.net/gh/RolinShmily/Images@main/hexo/1758268329514.png
 
 avatar:
   img: https://cdn.jsdelivr.net/gh/RolinShmily/Images@main/123964214_p0_master1200.jpg
@@ -72,7 +72,7 @@ disable_top_img: false
 default_top_img: https://cdn.jsdelivr.net/gh/RolinShmily/Images@main/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20250104113040.png
 
 # The banner image of index page
-index_img: https://cdn.jsdelivr.net/gh/RolinShmily/Images@main/wallhaven-p9rg6m.webp
+index_img: https://cdn.jsdelivr.net/gh/RolinShmily/Images@main/hexo/wallhaven-p9rg6m.webp
 
 # The banner image of archive page
 archive_img:
