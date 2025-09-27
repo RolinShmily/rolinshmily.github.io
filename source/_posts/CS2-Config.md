@@ -413,30 +413,34 @@ mp_weapons_glow_on_ground 1 // 开启地面武器的高亮显示功能
 - 注意查看控制台导航信息。
 - “p”键启用，出生点预设参考于 **Bad0RANG3** ，项目地址：https://github.com/Bad0RANG3/CS2PraticeCFG ，个人空间：https://space.bilibili.com/482966540
 
-|         功能         |     快捷键      | 控制台别名 |
-| :------------------: | :-------------: | :--------: |
-|   切换队友头顶显示   | ralt(右 alt 键) |     -      |
-|        弹着点        |        ↑        |     -      |
-|       杀死 Bot       |        ↓        |     -      |
-|   实时预测道具轨迹   |        ←        |     -      |
-|       重新开始       |        →        |     -      |
-|       补全护甲       |       F1        |     -      |
-|       自动回血       |       F2        |     -      |
-|     取消摔落伤害     |       F3        |     -      |
-|       添加 Bot       |       F4        |     -      |
-|     使 Bot 蹲下      |       F5        |     -      |
-| 使机器人模仿你的操作 |       F6        |     -      |
-|      视角放大镜      |       F7        |     -      |
-|       删除 Bot       |       F8        |     -      |
-|      Bhop 连跳       |       F12       |     -      |
-|   重现最近一次道具   |        L        |     -      |
-|     加速时间流逝     |        0        |     -      |
-|       放置 Bot       |     后侧键      |     -      |
-|       飞行模式       |        N        |     -      |
-|    显示速度信息等    |        K        |     -      |
-|     标准实战模拟     |        -        |    gkd     |
-|     恢复跑图模式     |        -        |     gg     |
-|    加载出生点预设    |        -        |   spawn    |
+|          功能          |     快捷键      | 控制台别名 |
+| :--------------------: | :-------------: | :--------: |
+|    切换队友头顶显示    | ralt(右 alt 键) |     -      |
+|         弹着点         |        ↑        |     -      |
+|        杀死 Bot        |        ↓        |     -      |
+|    实时预测道具轨迹    |        ←        |     -      |
+|        重新开始        |        →        |     -      |
+|        补全护甲        |       F1        |     -      |
+|        自动回血        |       F2        |     -      |
+|      取消摔落伤害      |       F3        |     -      |
+|        添加 Bot        |       F4        |     -      |
+|      使 Bot 蹲下       |       F5        |     -      |
+|  使机器人模仿你的操作  |       F6        |     -      |
+|       视角放大镜       |       F7        |     -      |
+|        删除 Bot        |       F8        |     -      |
+|       Bhop 连跳        |       F12       |     -      |
+|    重现最近一次道具    |        L        |     -      |
+|      加速时间流逝      |        0        |     -      |
+|        放置 Bot        |     后侧键      |     -      |
+|        飞行模式        |        N        |     -      |
+|     显示速度信息等     |        K        |     -      |
+|      标准实战模拟      |        -        |    gkd     |
+|      恢复跑图模式      |        -        |     gg     |
+|     加载出生点预设     |        -        |   spawn    |
+| 实体显示(高环境光遮蔽) |        .        |     -      |
+|       任意处安包       |        -        |   plant    |
+|      弹夹容量状态      |        /        |     -      |
+|        友伤状态        |       F9        |     -      |
 
 > 注意以下 cfg 都需要存放在游戏全局 cfg 文件夹下的 spawn 文件夹内，比如 **...\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\game\csgo\cfg\spawn** 或 **...\Steam\steamapps\common\Counter-Strike Global Offensive\game\csgo\cfg\spawn** 下。
 
@@ -666,12 +670,14 @@ mp_weapons_glow_on_ground 1 // 开启地面武器的高亮显示功能
 |         3 号准星         |   -    |    c03     |
 |         4 号准星         |   -    |    c04     |
 |         5 号准星         |   -    |    c05     |
+|         6 号准星         |   -    |    c06     |
 |         0 号视角         |   -    |    v00     |
 |         1 号视角         |   -    |    v01     |
 |         2 号视角         |   -    |    v02     |
 |         3 号视角         |   -    |    v03     |
 |         4 号视角         |   -    |    v04     |
 |         5 号视角         |   -    |    v05     |
+|         6 号视角         |   -    |    v06     |
 
 - Tips: 如果你有能力，可以自己根据代码魔改，将源代码绑定按键，实现一键切换准星/持枪视角。
   > 由于 Valve 的脚本指令单条有长度限制，而准星参数的设置已经超过该限制，故直接用 cfg 文件来保存准星预设。
@@ -700,6 +706,10 @@ mp_weapons_glow_on_ground 1 // 开启地面武器的高亮显示功能
 - `05号准星Config`：<a href="./cfgs/crosshair_library/05.cfg" class="file-link" data-filename="05.cfg">05.cfg</a>
 - - 单击`(Click)`查看文件，`Ctrl+单击(click)`下载文件。（请注意浏览器拦截下载）
 - 准星代码: `CSGO-Q4APO-buiyc-i9V7H-7sxJN-Zy8rN`
+
+- `06号准星Config`：<a href="./cfgs/crosshair_library/06.cfg" class="file-link" data-filename="06.cfg">06.cfg</a>
+- - 单击`(Click)`查看文件，`Ctrl+单击(click)`下载文件。（请注意浏览器拦截下载）
+- 准星代码: `CSGO-LpB26-mhWAt-srQVK-fEE34-BWxTC`
 
 ---
 

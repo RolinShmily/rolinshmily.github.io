@@ -50,6 +50,10 @@ async function packAndDownloadEcho() {
       name: "crosshair_library/05.cfg",
       url: "./cfgs/crosshair_library/05.cfg",
     },
+    {
+      name: "crosshair_library/06.cfg",
+      url: "./cfgs/crosshair_library/06.cfg",
+    },
   ];
 
   // 3. 创建ZIP实例
