@@ -1,5 +1,5 @@
 ---
-title: CS2指令与配置
+title: CS2指令与配置 | CFG
 categories:
   - - Game
     - CS2
@@ -12,9 +12,10 @@ cover: >-
   https://cdn.jsdelivr.net/gh/RolinShmily/Images@main/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240913084859.jpg
 abbrlink: b445fd38
 date: 2025-04-12 00:00:00
-updated: 2025-09-22 00:00:00
+updated: 2025-10-08 00:00:00
 description:
 keywords:
+sticky: 1
 ---
 
 # 什么是 CFG

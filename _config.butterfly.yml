@@ -266,7 +266,7 @@ footer:
   owner:
     enable: true
     since: 2024
-  custom_text: <a href="https://beian.miit.gov.cn/"><span>豫ICP备2025140316号-1</span></a>
+  custom_text: <a href="https://beian.miit.gov.cn/"><span>豫ICP备2025140316号-1</span></a> <br> <a href="https://icp.gov.moe/?keyword=20259601" target="_blank"><span>萌ICP备20259601号</span></a>
   # Copyright of theme and framework
   copyright: true
 
@@ -781,13 +781,13 @@ mask:
 
 # Loading Animation
 preloader:
-  enable: false
+  enable: true
   # source
   # 1. fullpage-loading
   # 2. pace (progress bar)
-  source: 1
+  source: 2
   # pace theme (see https://codebyzach.github.io/pace/)
-  pace_css_url:
+  pace_css_url: /css/barber-shop.css
 
 # Page Transition
 enter_transitions: true
@@ -869,7 +869,7 @@ canvas_nest:
 
 # Mouse click effects: fireworks
 fireworks:
-  enable: true
+  enable: false
   zIndex: 9999
   mobile: false
 
@@ -880,13 +880,22 @@ click_heart:
 
 # Mouse click effects: words
 clickShowText:
-  enable: false
+  enable: true
   text:
-    # - I
-    # - LOVE
-    # - YOU
+    - ❤富强❤
+    - ❤民主❤
+    - ❤文明❤
+    - ❤和谐❤
+    - ❤自由❤
+    - ❤平等❤
+    - ❤公正❤
+    - ❤法治❤
+    - ❤爱国❤
+    - ❤敬业❤
+    - ❤诚信❤
+    - ❤友善❤
   fontSize: 15px
-  random: false
+  random: true
   mobile: false
 
 # --------------------------------------
