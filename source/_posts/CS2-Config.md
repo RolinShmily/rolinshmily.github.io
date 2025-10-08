@@ -405,6 +405,8 @@ mp_weapons_glow_on_ground 1 // 开启地面武器的高亮显示功能
 |     强制方形小地图     |       -       |      squareon       |
 |     POV 圆形小地图     |       -       |      squareoff      |
 |    计分板圆形小地图    |       -       |        round        |
+|     开启狙击镜扩散     |       -       |      sniperon       |
+|     关闭狙击镜扩散     |       -       |      sniperoff      |
 
 ## practice.cfg
 
