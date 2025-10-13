@@ -309,7 +309,7 @@ mp_weapons_glow_on_ground 1 // 开启地面武器的高亮显示功能
 <div id="statusMessage1" style="margin-top: 8px; color: #666; font-size: 14px; height: 20px;"></div>
 <script src="/js/CS2_download_zip_button_self.js"></script>
 
-点击：[云盘存储地址](https://openlist.srprolin.top/)，可以打包下载 cfgs 文件夹。
+点击：[SrP-Cloud](https://openlist.srprolin.top/)，可以打包下载 cfgs 文件夹。
 
 - 下载可能会有延迟，请耐心等待，并且请注意浏览器拦截下载。
 - 下载完成后会得到一个压缩包`Allcfgs.zip`，直接放进 cfg 文件夹，并右击选择“解压到此文件夹“即可。
@@ -722,9 +722,9 @@ mp_weapons_glow_on_ground 1 // 开启地面武器的高亮显示功能
 # lulu's cfg
 
 - 修改了 autoexec 的默认按键绑定与 crosshair_view 的内容
-- 点击`云盘存储地址`查看并下载所更改文件
+- 点击`SrP-Cloud`查看并下载所更改文件
 - 可以先下载`全部自用配置cfg`,再下载此部分,将修改后的内容覆盖原来的文件.
-  点击：[云盘存储地址](https://openlist.srprolin.top/)，对应名称文件夹里是修改过的相关文件。
+  点击：[SrP-Cloud](https://openlist.srprolin.top/)，对应名称文件夹里是修改过的相关文件。
 
 <button id="downloadBtn2" onclick="packAndDownloadLulu()" style="padding: 8px 16px; background: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px;">
   <span>打包并下载全部CFG文件(此链接为全部cfg)</span>
@@ -742,9 +742,9 @@ mp_weapons_glow_on_ground 1 // 开启地面武器的高亮显示功能
 # echo's cfg
 
 - 修改了 autoexec 的默认按键绑定
-- 点击`云盘存储地址`查看并下载所更改文件
+- 点击`SrP-Cloud`查看并下载所更改文件
 - 可以先下载`全部自用配置cfg`,再下载此部分,将修改后的内容覆盖原来的文件.
-  点击：[云盘存储地址](https://openlist.srprolin.top/)，对应名称文件夹里是修改过的相关文件。
+  点击：[SrP-Cloud](https://openlist.srprolin.top/)，对应名称文件夹里是修改过的相关文件。
 
 <button id="downloadBtn3" onclick="packAndDownloadEcho()" style="padding: 8px 16px; background: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px;">
   <span>打包并下载全部CFG文件(此链接为全部cfg)</span>
