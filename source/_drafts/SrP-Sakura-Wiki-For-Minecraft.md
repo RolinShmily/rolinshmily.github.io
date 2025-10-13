@@ -12,6 +12,7 @@ tags:
   - 光影
   - 资源包
   - Wiki
+cover: https://cdn.jsdelivr.net/gh/RolinShmily/Images@main/hexo/PixPin_2025-08-04_15-10-35.png
 date: 2025-10-13 00:00:00
 updated: 2025-10-13 00:00:00
 sticky: 1
