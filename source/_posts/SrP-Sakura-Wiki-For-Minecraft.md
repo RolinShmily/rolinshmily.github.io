@@ -14,9 +14,10 @@ categories:
     - Minecraft
 cover: >-
   https://cdn.jsdelivr.net/gh/RolinShmily/Images@main/hexo/PixPin_2025-08-04_15-10-35.png
+sticky: 1
+abbrlink: dd97024
 date: 2025-10-13 00:00:00
 updated: 2025-10-13 00:00:00
-sticky: 1
 ---
 
 # SrP-Sakura 服务端
@@ -155,10 +156,6 @@ sticky: 1
 > 客户端已在[Github 仓库](https://github.com/RolinShmily/rolinshmily.github.io/releases)和[自建云盘](https://openlist.srprolin.top/)发布
 > `SrP-Sakura_Client.zip`为 `CurseForge` 标准包，而`SrP-Sakura_Client.mrpack`为 `Modrinth` 标准包。
 > 选择任意一个包，选择任意启动器，在启动器整合包选项中选择导入，或者直接拖入文件，等待启动器识别下载完成后即可游玩。
-
-- `CurseForge` 标准包：<a href="./SrP-Sakura_Client.zip" class="file-link" data-filename="SrP-Sakura_Client.zip">点击下载 SrP-Sakura_Client.zip</a>
-- `Modrinth` 标准包：<a href="./SrP-Sakura_Client.mrpack" class="file-link" data-filename="SrP-Sakura_Client.mrpack">点击下载 SrP-Sakura_Client.mrpack</a>
-- 请注意浏览器拦截，`Ctrl+单击左键`可以强制下载。
 
 ## 启动器推荐
 
