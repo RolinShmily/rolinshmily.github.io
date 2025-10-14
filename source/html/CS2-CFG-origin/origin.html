@@ -1,0 +1,123 @@
+<script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+<button
+  id="downloadBtn1"
+  onclick="packAndDownload()"
+  style="
+    padding: 8px 16px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  "
+>
+  <span>打包下载全部CFG文件</span>
+  <div
+    id="loader1"
+    style="
+      display: none;
+      width: 16px;
+      height: 16px;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      border-top-color: white;
+      animation: spin 1s ease-in-out infinite;
+    "
+  ></div>
+</button>
+<div
+  id="statusMessage1"
+  style="margin-top: 8px; color: #666; font-size: 14px; height: 20px"
+></div>
+<script src="/js/CS2_download_zip_button_self.js"></script>
+
+<a href="./cfgs/autoexec.cfg" class="file-link" data-filename="autoexec.cfg"
+  >autoexec.cfg</a
+>
+
+<button
+  id="downloadBtn2"
+  onclick="packAndDownloadLulu()"
+  style="
+    padding: 8px 16px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  "
+>
+  <span>打包并下载全部CFG文件(此链接为全部cfg)</span>
+  <div
+    id="loader2"
+    style="
+      display: none;
+      width: 16px;
+      height: 16px;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      border-top-color: white;
+      animation: spin 1s ease-in-out infinite;
+    "
+  ></div>
+</button>
+<div
+  id="statusMessage2"
+  style="margin-top: 8px; color: #666; font-size: 14px; height: 20px"
+></div>
+<script src="/js/CS2_download_zip_button_lulu.js"></script>
+
+<button
+  id="downloadBtn3"
+  onclick="packAndDownloadEcho()"
+  style="
+    padding: 8px 16px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  "
+>
+  <span>打包并下载全部CFG文件(此链接为全部cfg)</span>
+  <div
+    id="loader3"
+    style="
+      display: none;
+      width: 16px;
+      height: 16px;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      border-top-color: white;
+      animation: spin 1s ease-in-out infinite;
+    "
+  ></div>
+</button>
+<div
+  id="statusMessage3"
+  style="margin-top: 8px; color: #666; font-size: 14px; height: 20px"
+></div>
+<script src="/js/CS2_download_zip_button_echo.js"></script>
+
+<link rel="stylesheet" href="/css/CS2_download_preview.css" />
+<!-- 预览模态框（默认隐藏） -->
+<div class="cfg-preview-modal" id="cfgPreviewModal">
+  <div class="cfg-preview-content">
+    <button class="cfg-close-btn" onclick="closePreview()">×</button>
+    <h3 id="previewFileName"></h3>
+    <pre class="cfg-file-content" id="previewContent"></pre>
+    <button class="cfg-download-btn" onclick="downloadCurrentFile()">
+      下载此文件
+    </button>
+  </div>
+</div>
+<script src="/js/CS2_mono_file_preview_and_download_table.js"></script>
