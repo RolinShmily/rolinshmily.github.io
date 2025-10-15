@@ -153,7 +153,7 @@ updated: 2025-10-13 00:00:00
 
 # SrP-Sakura 客户端
 
-> 客户端已在[SrP-Cloud](https://openlist.srprolin.top/)中发布
+> 客户端已在[SrP-Cloud](https://cloud.srprolin.top/)中发布
 > `SrP-Sakura_Client.zip`为 `CurseForge` 标准包，而`SrP-Sakura_Client.mrpack`为 `Modrinth` 标准包。
 > 选择任意一个包，选择任意启动器，在启动器整合包选项中选择导入，或者直接拖入文件，等待启动器识别下载完成后即可游玩。
 
