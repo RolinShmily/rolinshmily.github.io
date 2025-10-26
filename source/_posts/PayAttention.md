@@ -22,4 +22,7 @@ sticky: 3
 - 停用 Bing、Google、Baidu 的站点验证：在其平台上所注册的域名已转移
 - 删除所有的备案信息
 
-该博客将使用`GithubPages`保持存在，但不再更新，域名为`rolinshmily.github.io`
+该项目页面将使用`GithubPages`保持长期存在，并在`Vercel`平台托管了一份静态资源，下面是访问地址：
+
+- [Github Pages](http://rolinshmily.github.io):无`https`协议支持，使用 GitHub 免费域名(例)`username.github.io`，大多数情况下访问并不顺畅。
+- [Vercel App](https://rolinshmily-github-io.vercel.app/):支持`https`，使用 Vercel 提供的域名(例)`pjcname.vercel.app`，大多数情况可以正常访问。
