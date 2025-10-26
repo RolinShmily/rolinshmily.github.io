@@ -59,30 +59,30 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
-  refresh-cdn:
-    needs: deploy
-    runs-on: ubuntu-latest
-    steps:
-      # 拉取仓库代码
-      - name: Checkout code
-        uses: actions/checkout@v4
+#  refresh-cdn:
+#    needs: deploy
+#    runs-on: ubuntu-latest
+#    steps:
+#      # 拉取仓库代码
+#      - name: Checkout code
+#        uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.9"
+#      - name: Set up Python
+#        uses: actions/setup-python@v5
+#        with:
+#          python-version: "3.9"
 
-      # 安装Python依赖并执行CDN刷新脚本
-      - name: Refresh CDN Cache
-        run: |
-          # 安装Python SDK
-          python -m pip install --upgrade pip
-          pip install aliyun-python-sdk-cdn aliyun-python-sdk-core
+#      # 安装Python依赖并执行CDN刷新脚本
+#      - name: Refresh CDN Cache
+#        run: |
+#          # 安装Python SDK
+#          python -m pip install --upgrade pip
+#          pip install aliyun-python-sdk-cdn aliyun-python-sdk-core
 
-          # 使用绝对路径和引号包裹参数
-          python ${{ github.workspace }}/ScriptsForRefreshCDN/Refresh.py \
-            -i "${{ secrets.ALIYUN_ACCESS_KEY_ID }}" \
-            -k "${{ secrets.ALIYUN_ACCESS_KEY_SECRET }}" \
-            -r "${{ github.workspace }}/ScriptsForRefreshCDN/urllist.txt" \
-            -t "clear" \
-            -o "Directory"
+#          # 使用绝对路径和引号包裹参数
+#          python ${{ github.workspace }}/ScriptsForRefreshCDN/Refresh.py \
+#            -i "${{ secrets.ALIYUN_ACCESS_KEY_ID }}" \
+#            -k "${{ secrets.ALIYUN_ACCESS_KEY_SECRET }}" \
+#            -r "${{ github.workspace }}/ScriptsForRefreshCDN/urllist.txt" \
+#            -t "clear" \
+#            -o "Directory"

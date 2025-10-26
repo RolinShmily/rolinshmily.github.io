@@ -53,7 +53,7 @@ code_blocks:
 #   icon: link || the description || color
 social:
   fa-brands fa-bilibili: https://space.bilibili.com/422744280/ || Bilibili || "#00A2D7"
-  fa-solid fa-rss: https://blog.srprolin.top/rss2.xml || RSS || "#hdhfbb"
+  fa-solid fa-rss: http://rolinshmily.github.io/rss2.xml || RSS || "#hdhfbb"
 
 # --------------------------------------
 # Image Settings
@@ -266,7 +266,7 @@ footer:
   owner:
     enable: true
     since: 2024
-  custom_text: <a href="https://beian.miit.gov.cn/"><span>豫ICP备2025140316号-1</span></a> <br> <a href="https://icp.gov.moe/?keyword=20259601" target="_blank"><span>萌ICP备20259601号</span></a>
+  custom_text:
   # Copyright of theme and framework
   copyright: true
 
@@ -528,7 +528,7 @@ comments:
   # Leave it empty if you don't need comments
   # Choose: Disqus/Disqusjs/Livere/Gitalk/Valine/Waline/Utterances/Facebook Comments/Twikoo/Giscus/Remark42/Artalk
   # Format of two comments system : Disqus,Waline
-  use: Waline
+  use:
   # Display the comment name next to the button
   text: true
   # Lazyload: The comment system will be load when comment element enters the browser's viewport.
@@ -732,11 +732,9 @@ ad:
 # --------------------------------------
 
 site_verification:
-  - name: google-site-verification
-    content: cW1xRiHp03NA47zcbWIz-wwOYj4FJqC0sKPfOTZrtwA
-  - name: baidu-site-verification
-    content: codeva-NkPjLaCuAq
-
+  - name:
+    content:
+    
 # --------------------------------------
 # Beautify / Effect
 # --------------------------------------

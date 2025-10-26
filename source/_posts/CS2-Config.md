@@ -358,7 +358,7 @@ mp_weapons_glow_on_ground 1 // 开启地面武器的高亮显示功能
 # SrP-CFG_ForCS2
 
 > 本人的`CFG`预设文件已经在`GitHub仓库`[SrP-CFG_ForCS2](https://github.com/RolinShmily/SrP-CFG_ForCS2)中发布
-> 你也可以来到我的个人网盘[SrP-BloG](https://cloud.srprolin.top)中下载最新版本的`CFG`文件
+> 你也可以来到我的个人网盘[SrP-Cloud](https://cloud.srprolin.top)中下载最新版本的`CFG`文件
 > 如果你连接`GitHub`并不顺畅，可以来到[Gitee 的镜像仓库](https://gitee.com/srprolin/SrP-CFG_ForCS2)来读取使用文档
 
 这是本人所使用的一套`CFG`预设文件，包含了多个场景的`CFG`使用需求，且长期维护更新，保证有效可用。
